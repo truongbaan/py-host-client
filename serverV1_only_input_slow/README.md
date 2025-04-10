@@ -65,5 +65,5 @@ python client.py
 > Note: Do not run both `host.py` and `client.py` on the same computer since the host uses pyautogui to simulate key presses which might interfere with your own inputs.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file in the main directory for details.
 

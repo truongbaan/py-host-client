@@ -5,6 +5,9 @@ This is a simple Python project designed to establish a connection between multi
 
 This project is created for educational and experimental purposes on local networks.
 
+**Warning:**  
+> **Do not run both the host and client on the same computer** as it may cause interference with your local inputs.
+
 ## Features
 - Establish TCP connection between host and multiple clients.
 - Clients send real-time key press events to the host.

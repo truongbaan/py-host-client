@@ -148,7 +148,7 @@ def start_host():
     print("[SERVER STOPPED]")
 
 if __name__ == "__main__":
-    # Start the shutdown listener in a separate daemon thread.
+    #start
     shutdown_thread = threading.Thread(target=stop, daemon=True)
     shutdown_thread.start()
 

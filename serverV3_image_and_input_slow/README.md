@@ -2,7 +2,11 @@
 
 ## Description
 
-This Python project implements a remote desktop and remote input control system. The host computer streams its screen to one or more client devices, and clients send their keyboard events back to the host. The host then simulates these key presses using the **pyautogui** library. This setup is ideal for experiments or demonstrations of socket programming, image streaming, and remote control over local networks.
+This project demonstrates a TCP-based connection that enables remote control and real-time screen streaming. It consists of two main components:
+
+Host (host3.py): Captures the host computer’s screen and streams it to connected clients. It also processes incoming key events to simulate key presses using the pyautogui library.
+
+Client (client3.py): Connects to the host over a local network, displays the streamed screen, and sends keyboard events in real-time to control the host remotely.
 
 **Important:**
 
@@ -23,7 +27,7 @@ This Python project implements a remote desktop and remote input control system.
 
 ## Technologies Used
 
-- **Programming Language:** Python 3.12.6 (or later)
+- **Programming Language:** Python 3.12.6
 - **Libraries:**
   - `socket` for network communication
   - `threading` for handling concurrent connections and processes
@@ -33,7 +37,7 @@ This Python project implements a remote desktop and remote input control system.
   - `cv2` (OpenCV) for displaying the streamed screen on the client
   - `pickle` and `struct` for serializing and sending image frames and messages
   - `numpy` for array manipulation in image processing
-- **IDE/Editor:** Visual Studio Code (or your preferred environment)
+- **IDE/Editor:** Visual Studio Code
 
 ## Installation
 
@@ -47,7 +51,7 @@ To run the project locally, follow these steps:
    ```
 
 2. **Install Python:**\
-   Ensure Python 3.12.6 or later is installed on your system. Download it from the [official Python website](https://www.python.org/downloads/).
+   Download and install [Python 3.12.6](https://www.python.org/downloads/).
 
 3. **Install Required Libraries:**\
    In a terminal or command prompt inside your project directory, run:

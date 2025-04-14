@@ -181,5 +181,6 @@ def start_client():
         pass
 
 if __name__ == "__main__":
+    #start
     start_client()
     print("Disconnected from host.")

@@ -101,14 +101,14 @@ def send_key(event):
     # If there are modifiers and the key is not itself a modifier, send a hotkey message.
     if modifiers and event.name not in ["ctrl", "shift", "alt"]:
         # Build the hotkey combination
-        keys = modifiers + [event.name]
+        keys = modifiers + [event.name.lower() if isinstance(event.name, str) and 'A' <= event.name <= 'z' else event.name]
         message = {"type": "hotkey", "keys": keys}
     else:
         # Otherwise, send a normal key event message.
         message = {"key": event.name, "event_type": "down"}
 
     message_str = json.dumps(message)
-    # Create a header with the length of the JSON message (using 4 bytes for example)
+    # Create a header with the length of the JSON message 
     header = struct.pack(">L", len(message_str))
     try:
         client.sendall(header + message_str.encode("utf-8"))

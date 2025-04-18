@@ -73,5 +73,7 @@ python client2.py
 - The received frame (sent via a TCP connection and unpickled) is displayed in real-time using OpenCV.
 - To exit, press the `ESC` key in the OpenCV window.
 
+> **Reminder:** This only works on devices connected to the **same local Wi-Fi network**.
+
 ## License
 This project is licensed under the MIT License - see the LICENSE file in the main directory for details.

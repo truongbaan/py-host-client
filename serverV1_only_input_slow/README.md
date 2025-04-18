@@ -67,6 +67,8 @@ python client.py
 
 > Note: Do not run both `host.py` and `client.py` on the same computer since the host uses pyautogui to simulate key presses which might interfere with your own inputs.
 
+> **Reminder:** This only works on devices connected to the **same local Wi-Fi network**.
+
 ## License
 This project is licensed under the MIT License - see the LICENSE file in the main directory for details.
 

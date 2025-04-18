@@ -90,6 +90,8 @@ On the client computer:
 
 > **Note:** Running host and client on the same computer is not recommended due to potential input interference.
 
+> **Reminder:** This only works on devices connected to the **same local Wi-Fi network**.
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file in the main directory for details.

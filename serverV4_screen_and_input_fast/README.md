@@ -25,7 +25,6 @@ This project allows a user to remotely control another computer on the **same Wi
   - `socket` - TCP communication
   - `threading` - concurrent operations
   - `keyboard` - input capture and simulation
-  - `pyautogui` (or similar via `keyboard`) - key simulation
   - `mss` - fast screen capturing
   - `cv2` - screen display
   - `pickle` + `struct` - data serialization
@@ -49,7 +48,7 @@ This project allows a user to remotely control another computer on the **same Wi
    pip install opencv-python pyautogui keyboard mss numpy
    ```
 
-   *(Additional setup may be required depending on your OS permissions for `keyboard` and `pyautogui`.)*
+   *(Additional setup may be required depending on your OS permissions for `keyboard`.)*
 
 ## Usage
 

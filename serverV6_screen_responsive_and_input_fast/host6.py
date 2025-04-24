@@ -79,27 +79,49 @@ connections = []  # For multiple connections
 @time_it
 def handle_input(conn):
     global letter_input
-    while server_running:
-        try:
-            # Read the 4-byte length header first
-            header = conn.recv(4)
-            if not header:
+    try:
+        while server_running:
+            # read header
+            try:
+                header = conn.recv(4)
+            except (ConnectionResetError, ConnectionAbortedError) as e:
+                print(f"[INFO] Peer closed/reset connection: {e}")
                 break
+
+            if len(header) < 4:
+                # no header -> clean shutdown
+                break
+
             msg_length = struct.unpack(">L", header)[0]
-            data = b""
-            # Read the full JSON message based on the length
+
+            data = bytearray()
             while len(data) < msg_length:
-                packet = conn.recv(msg_length - len(data))
+                try:
+                    packet = conn.recv(msg_length - len(data))
+                except (ConnectionResetError, ConnectionAbortedError) as e:
+                    print(f"[INFO] Peer aborted during recv: {e}")
+                    break
                 if not packet:
                     break
-                data += packet
-            if len(data) != msg_length:
+                data.extend(packet)
+
+            if len(data) < msg_length:
                 break
+
             message = data.decode("utf-8")
+            if message == DISCONNECT_MSG: #if disconnect msg appear -> break
+                print("[INFO] Received graceful DISCONNECT_MSG.")
+                break
+
             letter_input.put(message)
-        except Exception as e:
-            print(f"[ERROR in key events] {e}")
-            break
+
+    finally:
+        try:
+            conn.shutdown(socket.SHUT_RDWR)
+        except OSError:
+            pass
+        conn.close()
+        print("[INFO] Closed input handler socket.")
 
 @time_it
 def stream_screen(conn):

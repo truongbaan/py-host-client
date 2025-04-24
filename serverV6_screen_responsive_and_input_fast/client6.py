@@ -121,7 +121,21 @@ def send_key(event):
 def exit():
     global connecting, client
     print("[EXIT] 'Esc' pressed.")
+    if client:
+        # send Disconnect msg when stop connecting
+        payload = DISCONNECT_MSG.encode(FORMAT)
+        header  = struct.pack(">L", len(payload))
+        try:
+            client.sendall(header + payload)
+            # let the server see the FIN
+            client.shutdown(socket.SHUT_RDWR)
+        except Exception as e:
+            print(f"[WARN] during shutdown send: {e}")
+        finally:
+            client.close()
+            client = None
     connecting = False
+    keyboard.unhook_all()
 
 def start_client():
     global client, connecting

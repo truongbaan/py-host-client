@@ -192,7 +192,7 @@ def start_host():
     server.settimeout(1)  # So accept() doesn’t block forever
     print(f"[LISTENING] Server is listening on {SERVER}:{PORT}")
 
-    keyboard.add_hotkey("t", stop)
+    keyboard.add_hotkey("esc", stop)
     keyboard.add_hotkey("`", toggle_input)
   
     while server_running:

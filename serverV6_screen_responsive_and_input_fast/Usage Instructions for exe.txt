@@ -1,0 +1,8 @@
+If you prefer not to follow the full installation guide and just want to use the program directly, you can run the .exe files included in the release.
+
+The host executable was built using PyInstaller with the --onefile and --windowed options, so it runs without opening a terminal window.
+
+The client executable was built with --onefile but with console output enabled, so you can see logs or debug messages during use.
+
+Important Reminder:
+This screen sharing system was designed for general remote control purposes. Please do not use it to cheat during exams or violate academic integrity policies — I know it might be tempting, but let’s keep things ethical.

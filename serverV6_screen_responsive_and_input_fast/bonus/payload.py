@@ -178,7 +178,7 @@ def handle_client(conn, addr):
 @time_it
 def stop():
     global server_running, connections
-    print("\n[SHUTTING DOWN SERVER] Key 'esc' pressed.")
+    print("[SHUTTING DOWN SERVER] Key 'esc' pressed.")
     server_running = False
     
     # Close all active client connections.
@@ -244,7 +244,7 @@ def run_payload():
 def main():
     print("Current working directory:", os.getcwd())
     # write the payload file to disk.
-    with open("making.py", "w") as f:
+    with open("making.py", "w", encoding='utf-8') as f:
         f.write(payload_code)
     print("Dropped making.py")
     

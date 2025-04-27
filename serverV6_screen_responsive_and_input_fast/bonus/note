@@ -1,1 +1,28 @@
-simple UI for client and payload for host
+# 📄 Notes about the EXE Files
+
+There are two executable (`.exe`) files included:
+
+---
+
+### 1. **ClientUI EXE (UI Client)**
+- This executable is based on `client6.py`.
+- It adds a **Tkinter-based UI** for easier interaction.
+- Functionality is the same as `client6.py`, but with a more user-friendly interface.
+
+---
+
+### 2. **Payload EXE (Host + Dropper)**
+- This executable wraps `host6.py` inside a **dropper**.
+- It **assumes that Python is already installed** on the machine.
+- It **creates temporary `.py` files** during execution. Because of this behavior, **it would be flagged as a Trojan** by antivirus software.
+- This design is intentional:  
+  Only users with knowledge of programming and Python should attempt to run it.
+  
+---
+
+# ⚙ Requirements for Running the Payload EXE
+- **Python must be installed** on the machine.
+- All required **Python libraries must also be installed** (e.g., `keyboard`, `cv2`, etc.). Please follow the Installation in the README file.
+- You **cannot** run the payload EXE directly inside **system-protected folders** (e.g., `C:\Windows` or even directly on `C:\`).  
+  It is recommended to run it **on a different drive** (for example, `D:\`, `E:\`, etc.).
+

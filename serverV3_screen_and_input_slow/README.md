@@ -46,8 +46,9 @@ To run the project locally, follow these steps:
 1. **Clone the Repository:**
 
    ```bash
-   git clone <your-repo-link>
-   cd <your-repo-name>
+   git clone https://github.com/truongbaan/py-host-client.git
+   cd py-host-client
+   cd serverV3_screen_and_input_slow
    ```
 
 2. **Install Python:**\

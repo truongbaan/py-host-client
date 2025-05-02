@@ -47,8 +47,9 @@ This Python-based project enables remote control of a computer on the **same loc
 
 1. **Clone the Repository**
    ```bash
-   git clone <your-repo-link>
-   cd <your-repo-name>
+   git clone https://github.com/truongbaan/py-host-client.git
+   cd py-host-client
+   cd serverV6_screen_responsive_and_input_fast
    ```
 
 2. **Install Python 3.12.6**

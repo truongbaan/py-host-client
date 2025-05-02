@@ -48,8 +48,9 @@ To set up and run this project on your local machine, follow these steps:
 3. **Clone the Repository:**  
    Use Git to clone the project repository:
    ```bash
-   git clone <your-repo-link>
-   cd <your-repo-name>
+   git clone https://github.com/truongbaan/py-host-client.git
+   cd py-host-client
+   cd serverV2_only_screen_slow
    ```
 
 ## Usage Guide

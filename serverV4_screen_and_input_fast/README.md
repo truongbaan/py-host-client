@@ -35,8 +35,9 @@ This project allows a user to remotely control another computer on the **same Wi
 1. **Clone the Repository**
 
    ```bash
-   git clone <your-repo-link>
-   cd <your-repo-name>
+   git clone https://github.com/truongbaan/py-host-client.git
+   cd py-host-client
+   cd serverV4_screen_and_input_fast
    ```
 
 2. **Install Python**

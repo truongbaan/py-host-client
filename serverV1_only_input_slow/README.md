@@ -4,6 +4,9 @@
 This is a simple Python project designed to establish a connection between multiple client computers and a host computer over a TCP connection using IPv4. The project demonstrates socket programming with the ability for clients to send keyboard input events to the host in real-time. The host will simulate these key presses using the pyautogui module.
 
 This project is created for educational and experimental purposes on local networks.
+> **Inspiration:** This project was inspired by the following YouTube tutorial series:
+> [Socket Programming in Python](https://www.youtube.com/watch?v=l5WU7d49OGk&list=PLS1QulWo1RIZGSgRsn0b8w9uoWM1gHDpo&index=1)
+
 
 **Warning:**  
 > **Do not run both the host and client on the same computer** as it may cause interference with your local inputs.

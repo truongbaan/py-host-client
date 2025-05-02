@@ -121,4 +121,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## Final Thoughts
 
-A simple tcp connection through ipv4 with screen sharing and input manipulation from both host and client, this could be useful for those one want the other to access and control keyboard input of your computer (in same network) but not through any apps if you scare of privacy and apps collecting information, you could just run the code yourself and can also modify the code base on your thought.
+This project was to explore how remote input and screen sharing works at the socket level. It offers a lightweight, self-hosted alternative to third-party apps, giving you full control over behavior and privacy. You can inspect, run, or customize the code however you like.
